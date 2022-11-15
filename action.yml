@@ -1,0 +1,23 @@
+name: "Heroku Capture PG DB"
+description: "Github Action for capture (backup) heroku pg database"
+author: "Jeremy Montesinos"
+branding:
+  icon: "database"
+  color: "purple"
+inputs:
+  heroku_email:
+    description: "Email that you use with heroku."
+    required: true
+  heroku_api_key:
+    description: "This will be used for authentication. You can find it in your heroku homepage account settings."
+    required: true
+  heroku_app_name:
+    description: "The name of the app to capture database."
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.heroku_email }}
+    - ${{ inputs.heroku_api_key }}
+    - ${{ inputs.heroku_app_name }}
