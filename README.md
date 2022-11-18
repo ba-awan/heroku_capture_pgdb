@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: mjerem34/heroku_capture_pgdb@1.0.0
+      - uses: mjerem34/heroku_capture_pgdb@1.0.5
         with:
           heroku_email: "" # ADD YOUR HEROKU EMAIL HERE
           heroku_api_key: "" # ADD YOUR HEROKU API KEY HERE
