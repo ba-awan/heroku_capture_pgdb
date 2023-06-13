@@ -11,4 +11,4 @@ machine git.heroku.com
     password $2
 EOF
 
-sh -c "heroku pg:backups:capture -a $3"
+sh -c "heroku pg:backups:capture JADE -a $3"
